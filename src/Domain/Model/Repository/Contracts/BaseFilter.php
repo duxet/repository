@@ -31,164 +31,45 @@ interface BaseFilter
     const NOT_ENDS = 'not_ends';
     const NOT_STARTS = 'not_starts';
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function notStartsWith(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function notEndsWith(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     *
-     * @return BaseFilter
-     */
     public function empty(string $filterName): BaseFilter;
 
-    /**
-     * @param string $filterName
-     *
-     * @return BaseFilter
-     */
     public function notEmpty(string $filterName): BaseFilter;
 
-    /**
-     * @param string $filterName
-     *
-     * @return BaseFilter
-     */
     public function hasEmpty(string $filterName): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function startsWith(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function endsWith(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function equal(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function notEqual(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param array  $value
-     *
-     * @return BaseFilter
-     */
     public function includeGroup(string $filterName, array $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param array  $value
-     *
-     * @return BaseFilter
-     */
     public function notIncludeGroup(string $filterName, array $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $firstValue
-     * @param $secondValue
-     *
-     * @return BaseFilter
-     */
     public function range(string $filterName, $firstValue, $secondValue): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $firstValue
-     * @param $secondValue
-     *
-     * @return BaseFilter
-     */
     public function notRange(string $filterName, $firstValue, $secondValue): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function notContain(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function contain(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function beGreaterThanOrEqual(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function beGreaterThan(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function beLessThanOrEqual(string $filterName, $value): BaseFilter;
 
-    /**
-     * @param string $filterName
-     * @param $value
-     *
-     * @return BaseFilter
-     */
     public function beLessThan(string $filterName, $value): BaseFilter;
 
-    /**
-     * @return mixed
-     */
     public function clear();
 
-    /**
-     * @return mixed
-     */
     public function get() : array;
 }

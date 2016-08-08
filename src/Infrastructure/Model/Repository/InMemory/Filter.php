@@ -23,12 +23,6 @@ class Filter
     const MUST = 'must';
     const SHOULD = 'should';
 
-    /**
-     * @param array           $results
-     * @param FilterInterface $filter
-     *
-     * @return array
-     */
     public static function filter(array $results, FilterInterface $filter): array
     {
         $filteredResults = $results;
@@ -57,11 +51,6 @@ class Filter
         return $filteredResults;
     }
 
-    /**
-     * @param array $filters
-     *
-     * @return array
-     */
     private static function removeEmptyFilters(array $filters): array
     {
         $filters = array_filter($filters, function ($v) {
@@ -71,10 +60,6 @@ class Filter
         return $filters;
     }
 
-    /**
-     * @param array $filteredResults
-     * @param array $filters
-     */
     protected static function must(array &$filteredResults, array $filters)
     {
         foreach ($filters as $filterName => $valuePair) {
@@ -159,10 +144,6 @@ class Filter
         }
     }
 
-    /**
-     * @param array $filteredResults
-     * @param array $filters
-     */
     protected static function mustNot(array &$filteredResults, array $filters)
     {
         foreach ($filters as $filterName => $valuePair) {
@@ -244,11 +225,6 @@ class Filter
         }
     }
 
-    /**
-     * @param array $results
-     * @param array $filteredResults
-     * @param array $filters
-     */
     protected static function should(array &$results, array &$filteredResults, array $filters)
     {
         foreach ($filters as $filterName => $valuePair) {

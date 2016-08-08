@@ -12,16 +12,6 @@ namespace NilPortugues\Foundation\Domain\Model\Repository\Contracts;
 
 interface Pageable
 {
-    /**
-     * Pageable constructor.
-     *
-     * @param             $pageNumber
-     * @param             $pageSize
-     * @param Sort|null   $sort
-     * @param Filter|null $filter
-     * @param Fields|null $fields
-     * @param Fields|null $distinctFields
-     */
     public function __construct(
         $pageNumber,
         $pageSize,
@@ -31,58 +21,25 @@ interface Pageable
         Fields $distinctFields = null
     );
 
-    /**
-     * @return int
-     */
-    public function offset(): int;
+    public function offset() : int;
 
-    /**
-     * @return int
-     */
-    public function pageNumber(): int;
+    public function pageNumber() : int;
 
-    /**
-     * @return Sort
-     */
-    public function sortings(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\Sort;
+    public function sortings() : Sort;
 
-    /**
-     * @return Pageable
-     */
-    public function next(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\Pageable;
+    public function next() : Pageable;
 
-    /**
-     * @return int
-     */
-    public function pageSize(): int;
+    public function pageSize() : int;
 
-    /**
-     * @return Pageable
-     */
-    public function previousOrFirst(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\Pageable;
+    public function previousOrFirst() : Pageable;
 
-    /**
-     * @return bool
-     */
-    public function hasPrevious(): bool;
+    public function hasPrevious() : bool;
 
-    /**
-     * @return Pageable
-     */
-    public function first(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\Pageable;
+    public function first() : Pageable;
 
-    /**
-     * @return Filter
-     */
-    public function filters(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\Filter;
+    public function filters() : Filter;
 
-    /**
-     * @return Fields
-     */
-    public function fields(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\Fields;
+    public function fields() : Fields;
 
-    /**
-     * @return Fields
-     */
-    public function distinctFields(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\Fields;
+    public function distinctFields() : Fields;
 }

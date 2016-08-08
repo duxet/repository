@@ -14,37 +14,27 @@ interface Mapping
 {
     /**
      * Returns the name of the collection or table.
-     *
-     * @return string
      */
-    public function name(): string;
+    public function name() : string;
 
     /**
      * Keys are object properties without property defined in identity().
      * Values its equivalents in the data store.
-     *
-     * @return array
      */
-    public function map(): array;
+    public function map() : array;
 
     /**
      * Name of the identity field in storage.
-     *
-     * @return string
      */
-    public function identity(): string;
+    public function identity() : string;
 
     /**
      * @param array $data
-     *
-     * @return mixed
      */
     public function fromArray(array $data);
 
     /**
      * The automatic generated strategy used will be the data-store's if set to true.
-     *
-     * @return bool
      */
-    public function autoGenerateId(): bool;
+    public function autoGenerateId() : bool;
 }

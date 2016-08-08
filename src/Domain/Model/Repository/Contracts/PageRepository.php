@@ -17,10 +17,6 @@ interface PageRepository
 {
     /**
      * Returns a Page of entities meeting the paging restriction provided in the Pageable object.
-     *
-     * @param Pageable $pageable
-     *
-     * @return Page
      */
-    public function findAll(Pageable $pageable = null): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\Page;
+    public function findAll(Pageable $pageable = null): Page;
 }

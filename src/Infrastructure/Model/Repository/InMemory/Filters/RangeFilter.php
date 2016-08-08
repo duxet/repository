@@ -42,10 +42,6 @@ class RangeFilter
     }
 
     /**
-     * @param $v
-     * @param $value1
-     * @param $value2
-     *
      * @throws Exception
      */
     private static function sameTypeGuard($v, $value1, $value2)

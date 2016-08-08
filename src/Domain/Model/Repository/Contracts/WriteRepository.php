@@ -14,28 +14,18 @@ interface WriteRepository extends Repository
 {
     /**
      * Adds a new entity to the storage.
-     *
-     * @param Identity $value
-     *
-     * @return mixed
      */
-    public function add(Identity $value);
+    public function add($value);
 
     /**
      * Adds a collections of entities to the storage.
-     *
-     * @param array $values
-     *
-     * @return mixed
      */
     public function addAll(array $values);
 
     /**
      * Removes the entity with the given id.
-     *
-     * @param $id
      */
-    public function remove(Identity $id);
+    public function remove(string $id);
 
     /**
      * Removes all elements in the repository given the restrictions provided by the Filter object.

@@ -6,11 +6,6 @@ use NilPortugues\Foundation\Infrastructure\Model\Repository\InMemory\PropertyVal
 
 class ComparisonFilter
 {
-    /**
-     * @param string $property
-     *
-     * @return \Closure
-     */
     public static function empty(string $property): \Closure
     {
         return function ($v) use ($property) {
@@ -18,11 +13,6 @@ class ComparisonFilter
         };
     }
 
-    /**
-     * @param string $property
-     *
-     * @return \Closure
-     */
     public static function notEmpty(string $property): \Closure
     {
         return function ($v) use ($property) {

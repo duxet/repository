@@ -12,32 +12,13 @@ namespace NilPortugues\Foundation\Domain\Model\Repository\Contracts;
 
 interface Fields
 {
-    /**
-     * Fields constructor.
-     *
-     * @param array $fields
-     */
     public function __construct(array $fields = []);
 
-    /**
-     * @param string $field
-     */
     public function add(string $field);
 
-    /**
-     * @return array
-     */
     public function get(): array;
 
-    /**
-     * Creates a null Value Object.
-     *
-     * @return self
-     */
-    public static function null();
+    public static function null() : self;
 
-    /**
-     * @return bool
-     */
     public function isNull(): bool;
 }

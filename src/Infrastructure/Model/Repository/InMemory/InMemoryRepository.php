@@ -25,7 +25,7 @@ use NilPortugues\Foundation\Infrastructure\Model\Repository\InMemory\Filter as I
 class InMemoryRepository implements ReadRepository, WriteRepository, PageRepository
 {
     /**
-     * @var Identity[]
+     * @var array
      */
     protected $data = [];
 
@@ -88,12 +88,8 @@ class InMemoryRepository implements ReadRepository, WriteRepository, PageReposit
 
     /**
      * Returns whether an entity with the given id exists.
-     *
-     * @param Identity $id
-     *
-     * @return bool
      */
-    public function exists(Identity $id): bool
+    public function exists(string $id): bool
     {
         $id = (string) $id;
 
@@ -102,12 +98,8 @@ class InMemoryRepository implements ReadRepository, WriteRepository, PageReposit
 
     /**
      * Adds a new entity to the storage.
-     *
-     * @param Identity $value
-     *
-     * @return mixed
      */
-    public function add(Identity $value)
+    public function add($value)
     {
         $id = (string) $value->id();
         $this->data[$id] = clone $value;
@@ -117,10 +109,6 @@ class InMemoryRepository implements ReadRepository, WriteRepository, PageReposit
 
     /**
      * Adds a collections of entities to the storage.
-     *
-     * @param array $values
-     *
-     * @return mixed
      */
     public function addAll(array $values)
     {
@@ -131,10 +119,8 @@ class InMemoryRepository implements ReadRepository, WriteRepository, PageReposit
 
     /**
      * Removes the entity with the given id.
-     *
-     * @param Identity $id
      */
-    public function remove(Identity $id)
+    public function remove(string $id)
     {
         if ($this->exists($id)) {
             unset($this->data[$id->id()]);

@@ -12,14 +12,6 @@ namespace NilPortugues\Foundation\Domain\Model\Repository\Exceptions;
 
 class RepositoryDataTypeException extends \InvalidArgumentException
 {
-    /**
-     * RepositoryDataTypeException constructor.
-     *
-     * @param string          $type
-     * @param mixed           $variable
-     * @param int             $code
-     * @param \Exception|null $previous
-     */
     public function __construct(string $type, $variable, int $code = 0, \Exception $previous = null)
     {
         $message = sprintf(

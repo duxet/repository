@@ -5,11 +5,6 @@ namespace NilPortugues\Foundation\Infrastructure\Model\Repository\InMemory;
 class PropertyValue
 {
     /**
-     * @param mixed  $object
-     * @param string $property
-     *
-     * @return mixed
-     *
      * @throws \Exception
      */
     public static function get($object, string $property)

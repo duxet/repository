@@ -16,11 +16,6 @@ use NilPortugues\Foundation\Domain\Model\Repository\Contracts\Sort;
 class Sorter
 {
     /**
-     * @param array $results
-     * @param Sort  $sort
-     *
-     * @return array
-     *
      * @throws \Exception
      */
     public static function sort(array $results, Sort $sort): array
@@ -56,9 +51,6 @@ class Sorter
      * @author: Clement Wong <cw@clement.hk>
      *
      * @link  : https://bugs.php.net/bug.php?id=53341
-     *
-     * @param array    $array
-     * @param callable $cmpFunction
      */
     protected static function stableUasort(array &$array, callable $cmpFunction)
     {

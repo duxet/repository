@@ -15,45 +15,24 @@ interface Order
     const ASCENDING = 'ASC';
     const DESCENDING = 'DESC';
 
-    /**
-     * @return bool
-     */
-    public function isDescending(): bool;
+    public function isDescending() : bool;
 
-    /**
-     * @return bool
-     */
-    public function isAscending(): bool;
+    public function isAscending() : bool;
 
-    /**
-     * @return string
-     */
-    public function direction(): string;
+    public function direction() : string;
 
-    /**
-     * @return string
-     */
-    public function __toString(): string;
+    public function __toString() : string;
 
     /**
      * Compares the current object with a second object.
      * It will compare its type and and its properties values.
-     *
-     * @param Order $object
-     *
-     * @return bool
      */
-    public function equals(Order $object): bool;
+    public function equals(Order $object) : bool;
 
     /**
      * Creates a null Value Object.
-     *
-     * @return self
      */
-    public static function null();
+    public static function null() : self;
 
-    /**
-     * @return bool
-     */
-    public function isNull(): bool;
+    public function isNull() : bool;
 }

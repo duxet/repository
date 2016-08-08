@@ -26,9 +26,6 @@ class StringFilter
     }
 
     /**
-     * @param $v
-     * @param $property
-     *
      * @throws Exception
      */
     private static function propertyGuard($v, $property)
@@ -39,9 +36,6 @@ class StringFilter
     }
 
     /**
-     * @param $value
-     * @param $type
-     *
      * @throws Exception
      */
     private static function valueGuard($value, $type)
@@ -69,12 +63,6 @@ class StringFilter
         };
     }
 
-    /**
-     * @param $property
-     * @param $value
-     *
-     * @return \Closure
-     */
     public static function notStartsWith($property, $value): \Closure
     {
         return function ($v) use ($property, $value) {
@@ -87,12 +75,6 @@ class StringFilter
         };
     }
 
-    /**
-     * @param $property
-     * @param $value
-     *
-     * @return \Closure
-     */
     public static function notEndsWith($property, $value): \Closure
     {
         return function ($v) use ($property, $value) {

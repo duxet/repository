@@ -16,40 +16,17 @@ interface Filter
     const MUST_NOT = 1;
     const SHOULD = 2;
 
-    /**
-     * @return array
-     */
-    public function filters(): array;
+    public function filters() : array;
 
-    /**
-     * @return BaseFilter
-     */
-    public function must(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\BaseFilter;
+    public function must() : BaseFilter;
 
-    /**
-     * @return BaseFilter
-     */
-    public function mustNot(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\BaseFilter;
+    public function mustNot() : BaseFilter;
 
-    /**
-     * @return BaseFilter
-     */
-    public function should(): \NilPortugues\Foundation\Domain\Model\Repository\Contracts\BaseFilter;
+    public function should() : BaseFilter;
 
-    /**
-     * @return $this
-     */
-    public function clear();
+    public function clear() : self;
 
-    /**
-     * Creates a null Value Object.
-     *
-     * @return self
-     */
-    public static function null();
+    public static function null() : self;
 
-    /**
-     * @return bool
-     */
-    public function isNull(): bool;
+    public function isNull() : bool;
 }

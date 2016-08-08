@@ -23,9 +23,6 @@ class ImmutableTypedCollection extends SplFixedArray
      */
     protected $type;
 
-    /**
-     * {@inheritDoc}
-     */
     public function offsetSet($index, $newval)
     {
         if (null === $index) {
@@ -36,9 +33,6 @@ class ImmutableTypedCollection extends SplFixedArray
         parent::offsetSet($index, $newval);
     }
 
-    /**
-     * @return int
-     */
     protected function calculateIndexKey(): int
     {
         $callable = function ($value) {
@@ -48,9 +42,6 @@ class ImmutableTypedCollection extends SplFixedArray
         return count(array_filter($this->toArray(), $callable));
     }
 
-    /**
-     * @param $newval
-     */
     protected function setGuardType($newval)
     {
         $type = gettype($newval);
@@ -58,8 +49,6 @@ class ImmutableTypedCollection extends SplFixedArray
     }
 
     /**
-     * @param $newval
-     *
      * @throws \RuntimeException
      */
     protected function guard($newval)
@@ -69,8 +58,6 @@ class ImmutableTypedCollection extends SplFixedArray
     }
 
     /**
-     * @param $type
-     *
      * @throws \RuntimeException
      */
     protected function baseTypeGuard($type)
@@ -87,8 +74,6 @@ class ImmutableTypedCollection extends SplFixedArray
     }
 
     /**
-     * @param $newval
-     *
      * @throws \RuntimeException
      */
     protected function objectGuard($newval)
